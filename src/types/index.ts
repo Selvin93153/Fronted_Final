@@ -3,6 +3,7 @@ import { array, number, object, string, InferOutput } from 'valibot';
 export const DraftProductSchema = object({
     title: string(),
     price: number(),
+    stock: number(),
 });
 
 export const ProductSchema = object({

@@ -32,6 +32,7 @@ export const Products = () => {
                             <th className="p-2">Precio</th>
                             <th className="p-2">Slug</th>
                             <th className="p-2">Stock</th>
+                            <th className="p-2">Available</th>
                             <th className="p-2">Acciones</th>
                         </tr>
                     </thead>
