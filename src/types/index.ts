@@ -1,19 +1,14 @@
-import { array, number, object, string, InferOutput } from 'valibot';
+import { array, object, string, InferOutput, number } from 'valibot';
 
-export const DraftProductSchema = object({
-    title: string(),
-    price: number(),
-    stock: number(),
+export const DraftRoleSchema = object({
+    nombre_rol: string(),
 });
 
-export const ProductSchema = object({
-    id: string(),
-    title: string(),
-    price: number(),
-    slug: string(),
-    stock: number(),
+export const RoleSchema = object({
+    rol_id: number(),
+    nombre_rol: string(),
 });
 
-export const ProductsSchema = array(ProductSchema);
+export const RolesSchema = array(RoleSchema);
 
-export type Product = InferOutput<typeof ProductSchema>
+export type Role = InferOutput<typeof RoleSchema>;

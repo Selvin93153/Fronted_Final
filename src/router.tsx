@@ -1,9 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from './layouts/Layout';
-import { loader as productsLoader, Products } from './views/Products';
-import { NewProduct, action as newProductAction } from './views/NewProduct';
-import { EditProduct, loader as editProductLoader, action as editProductAction } from './views/EditProduct';
-import { action as deleteProductAction } from './components/ProductDetails';
+import { loader as rolesLoader, Roles } from './views/Roles';
+import { NewRole, action as newRoleAction } from './views/NewRole';
+import { EditRole, loader as editRoleLoader, action as editRoleAction } from './views/EditRole';
+import { action as deleteRoleAction } from './components/RoleDetails';
+// src/router.tsx
+
+
 
 export const router = createBrowserRouter([
     {
@@ -12,25 +15,26 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Products />,
-                loader: productsLoader
+                element: <Roles />,
+                loader: rolesLoader
             },
             {
-                path: 'products/new',
-                element: <NewProduct />,
-                action: newProductAction,
+                path: 'roles/new',
+                element: <NewRole />,
+                action: newRoleAction,
             },
             {
-                path: 'products/:id/edit',      // ROA Pattern - Resourse Oriented design
-                element: <EditProduct />,
-                loader: editProductLoader,
-                action: editProductAction
+                path: 'roles/:rol_id/edit',      // ROA Pattern - Resourse Oriented design
+                element: <EditRole />,
+                loader: editRoleLoader,
+                action: editRoleAction
             },
             {
-                path: 'products/:id/delete',
-                element: <Products />,
-                action: deleteProductAction
+                path: 'roles/:rol_id/delete',
+                element: <Roles />,
+                action: deleteRoleAction
             }
+           
         ],
     }
 ]);
