@@ -57,6 +57,12 @@ const Header = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     setSelectedPage={setSelectedPage}
                     setIsMenuToggled={setIsMenuToggled} // Pasar esta función
                   />
+                   <Link
+                    page="Servicios"
+                    selectedPage={selectedPage}
+                    setSelectedPage={setSelectedPage}
+                    setIsMenuToggled={setIsMenuToggled} // Pasar esta función
+                  />
                 </div>
                 <div className={`${flexBetween} gap-8`}>
                   <p>Inicio</p>
