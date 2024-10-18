@@ -1,22 +1,29 @@
-import { createBrowserRouter } from 'react-router-dom';
-import { Layout } from './layouts/Layout';
+import { createBrowserRouter, Outlet } from 'react-router-dom';
+import HomePage from './components/secciones/HomePage/HomePage';
 import { loader as rolesLoader, Roles } from './views/Roles';
 import { NewRole, action as newRoleAction } from './views/NewRole';
 import { EditRole, loader as editRoleLoader, action as editRoleAction } from './views/EditRole';
 import { action as deleteRoleAction } from './components/RoleDetails';
-// src/router.tsx
-
-
+import Header from './components/Header'; // Asegúrate de importar el Header
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <Layout />,
+        element: (
+            <>
+                <Header />
+                <Outlet />
+            </>
+        ),
         children: [
             {
                 index: true,
+                element: <HomePage />,  // HomePage como la ruta principal
+            },
+            {
+                path: 'roles',
                 element: <Roles />,
-                loader: rolesLoader
+                loader: rolesLoader,
             },
             {
                 path: 'roles/new',
@@ -24,17 +31,16 @@ export const router = createBrowserRouter([
                 action: newRoleAction,
             },
             {
-                path: 'roles/:rol_id/edit',      // ROA Pattern - Resourse Oriented design
+                path: 'roles/:rol_id/edit',
                 element: <EditRole />,
                 loader: editRoleLoader,
-                action: editRoleAction
+                action: editRoleAction,
             },
             {
                 path: 'roles/:rol_id/delete',
                 element: <Roles />,
-                action: deleteRoleAction
+                action: deleteRoleAction,
             }
-           
         ],
     }
 ]);
