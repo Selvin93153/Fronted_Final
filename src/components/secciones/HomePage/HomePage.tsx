@@ -1,6 +1,10 @@
 import React from 'react';  // Importa la librería React.
 import R from '../../../assets/R.png';  // Importa la imagen localizada en la carpeta assets.
 import BackgroundImage from '../../../assets/BackgroundImage.jpg';  // Importa la imagen de fondo.
+import imag1 from '../../../assets/imag1.jpg';  // Importa la primera imagen.
+import imag2 from '../../../assets/imag2.jpg';  // Importa la segunda imagen.
+import imag3 from '../../../assets/imag3.jpg';  // Importa la tercera imagen.
+
 
 const Home: React.FC = () => {
   return (
@@ -53,23 +57,35 @@ const Home: React.FC = () => {
       </div>
 
       {/* Sección de patrocinadores */}
-      <div className="h-[150px] flex w-full bg-primary-100 py-10 my-10"> 
-        <div className="mx-auto w-5/6"> 
-          <div className="flex w-3/5 items-center justify-between gap-8"> 
-            {/* Patrocinador 1 */}
-            <div className="w-24 h-10 bg-gray-300">RedBull</div> 
-            {/* Aquí puedes cambiar el nombre del patrocinador dentro del <div>. "w-24 h-10" define el tamaño, y "bg-gray-300" es el color de fondo. */}
+      <div className="h-[150px] flex w-full bg-primary-100 py-10 my-10">
+  <div className="mx-auto w-full h-full"> 
+    <div className="flex w-full h-full items-center justify-between gap-4"> 
+      {/* Patrocinador 1 */}
+      <img
+        src={imag1}  // Ruta de la primera imagen
+        alt="Logo Patrocinador 1"
+        className="w-[100%] h-[210%] object-cover opacity-50 filter blur-sm"
+      />
+      
+      {/* Patrocinador 2 */}
+      <img
+        src={imag2}  // Ruta de la segunda imagen
+        alt="Logo Patrocinador 2"
+        className="w-full h-[210%] object-cover opacity-50 filter blur-sm"
+      />
 
-            {/* Patrocinador 2 */}
-            <div className="w-24 h-10 bg-gray-300">Forbes</div> 
-            {/* Cambia el nombre del patrocinador o reemplaza por imágenes. */}
 
-            {/* Patrocinador 3 */}
-            <div className="w-24 h-10 bg-gray-300">Fortune</div> 
-            {/* Cambia el nombre del patrocinador o reemplaza por imágenes. */}
-          </div>
-        </div>
-      </div>
+      
+      {/* Patrocinador 3 */}
+      <img
+        src={imag3}  // Ruta de la tercera imagen
+        alt="Logo Patrocinador 3"
+        className="w-full h-[210%] object-cover opacity-50 filter blur-sm"
+      />
+    </div>
+  </div>
+</div>
+
     </section>
   );
 };
