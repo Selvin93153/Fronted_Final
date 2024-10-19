@@ -23,7 +23,7 @@ export const Roles = () => {
                     New Role
                 </Link>
             </div>
-
+    
             <div className="p-2">
                 <table className="w-full mt-5 table-auto">
                     <thead className="bg-slate-800 text-white">
