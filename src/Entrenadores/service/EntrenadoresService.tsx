@@ -1,4 +1,4 @@
-import { safeParse, pipe, string, transform, number, parse } from 'valibot';
+import { safeParse } from 'valibot';
 import { DraftEntrenadorSchema, Entrenador, EntrenadorSchema, EntrenadorsSchema } from '../types';
 import axios from 'axios';
 
@@ -10,11 +10,11 @@ export const addEntrenador = async (data: EntrenadorData) => {
     try {
         const result = safeParse(DraftEntrenadorSchema, {
             nombre_completo: data.nombre_completo,
-            edad: data.edad,
+            edad: +data.edad,
             sexo: data.sexo,
             telefono: data.telefono,
             especialidad: data.especialidad,
-            años_experiencia: data.años_experiencia,
+            años_experiencia: +data.años_experiencia,
         });
         if (result.success) {
             const url = `${import.meta.env.VITE_API_URL}/api/entrenadores`;
@@ -38,15 +38,13 @@ export const addEntrenador = async (data: EntrenadorData) => {
 export const updateEntrenador = async (data: EntrenadorData, entrenador_id: Entrenador[ 'entrenador_id' ]) => {
     try {
 
-        const NumberSchema = pipe(string(), transform(Number), number());
-
         const result = safeParse(DraftEntrenadorSchema, {
             nombre_completo: data.nombre_completo,
-            edad: parse(NumberSchema, data.edad),
+            edad: +data.edad,
             sexo: data.sexo,
             telefono: data.telefono,
             especialidad: data.especialidad,
-            años_experiencia: parse(NumberSchema, data.años_experiencia),
+            años_experiencia: +data.años_experiencia,
         });
         if (result.success) {
             const url = `${import.meta.env.VITE_API_URL}/api/entrenadores/${entrenador_id}`;

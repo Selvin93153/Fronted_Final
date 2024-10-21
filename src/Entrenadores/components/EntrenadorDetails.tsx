@@ -3,8 +3,8 @@ import { Entrenador } from '../types'
 import { deleteEntrenadorById } from 'C:/Users/Admin/Desktop/Fronted_Fina/src/Entrenadores/service/EntrenadoresService.tsx';
 
 type EntrenadorDetailsProps = {
-    entrenador: Entrenador
-}
+    entrenador: Entrenador;
+};
 
 export const action = async ({ params }: ActionFunctionArgs) => {
 
@@ -48,7 +48,7 @@ export const EntrenadorDetails = ({ entrenador }: EntrenadorDetailsProps) => {
                             onClick={() => navigate(`/entrenadores/${entrenador.entrenador_id}/edit`)}
                             className='bg-indigo-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center'
                         >
-                            Editar
+                            Edit
                         </button>
                         <fetcher.Form
                             className='w-full'
@@ -62,7 +62,7 @@ export const EntrenadorDetails = ({ entrenador }: EntrenadorDetailsProps) => {
                         >
                             <input
                                 type="submit"
-                                value="Eliminar"
+                                value="Delete"
                                 className='bg-red-600 text-white rounded-lg w-full p-2 uppercase font-bold text-xs text-center'
                             />
                         </fetcher.Form>
@@ -70,5 +70,5 @@ export const EntrenadorDetails = ({ entrenador }: EntrenadorDetailsProps) => {
                 </td>
             </tr>
         </>
-    )
-}
+    );
+};

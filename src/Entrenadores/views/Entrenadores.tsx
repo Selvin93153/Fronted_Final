@@ -34,7 +34,7 @@ export const Entrenadores = () => {
                             <th className="p-2">telefono</th>
                             <th className="p-2">especialidad</th>
                             <th className="p-2">años_experiencia</th>
-                            <th className="p-2">Acciones</th>
+                            <th className="p-2">Actions</th>
                         </tr>
                     </thead>
                     <tbody>

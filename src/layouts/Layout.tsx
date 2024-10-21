@@ -1,44 +1,42 @@
-import { Outlet, Link } from 'react-router-dom';
+// src/layouts/Layout.tsx
+import { Link, Outlet } from 'react-router-dom';
+
 
 export const Layout = () => {
     return (
         <>
             <header className='bg-slate-800'>
-                <div className='mx-auto max-w-6xl py-10 flex justify-between items-center'>
+                <div className='mx-auto max-w-6xl py-10'>
+                  
                     <h1 className="text-4xl text-white">
-                       CONFIGURACION DE GYMNASIO 
+                        Roles Manager
                     </h1>
-                    <nav className='space-x-4'>
-                        <Link 
-                            to="/roles" 
-                            className='text-white hover:underline'
-                        >
-                            Roles
-                        </Link>
-                        <Link 
-                            to="/Asignaciones" 
-                            className='text-white hover:underline'
-                        >
-                            Asignaciones
-                        </Link>
-                        <Link 
-                            to="/Entrenadores" 
-                            className='text-white hover:underline'
-                        >
-                            Entrenadores
-                        </Link>
-                        <Link 
-                            to="/KidsArea" 
-                            className='text-white hover:underline'
-                        >
-                            KidsArea
-                        </Link>
-                        <Link 
-                            to="/Spa" 
-                            className='text-white hover:underline'
-                        >
-                            Spa
-                        </Link>
+                    <nav className="mt-5">
+                        <ul className="flex space-x-4">
+                            <li>
+                                <Link to="/" className="text-white hover:underline">
+                                    Inicio
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/" className="text-white hover:underline">
+                                    Roles
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/roles/new" className="text-white hover:underline">
+                                    Nuevo Rol
+                                </Link>
+                            </li>
+                                <li> <Link to="/entrenadores" className="text-white hover:underline">
+                                    ENTRENADORES
+                                </Link></li>
+                               
+                               
+                           
+
+                            {/* Aquí puedes agregar más enlaces según sea necesario */}
+                        </ul>
                     </nav>
                 </div>
             </header>
@@ -48,4 +46,4 @@ export const Layout = () => {
             </main>
         </>
     );
-}
+};
