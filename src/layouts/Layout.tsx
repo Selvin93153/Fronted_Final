@@ -11,7 +11,7 @@ export const Layout = () => {
                 </div>
             </header>
 
-            <main className='mt-10 mx-auto max-w-6xl p-10 bg-white shadow'>
+            <main className='mt-10 mx-auto  bg-white shadow'>
                 <Outlet />
             </main>
         </>
