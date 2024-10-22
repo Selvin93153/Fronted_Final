@@ -6,7 +6,7 @@ import { EditRole, loader as editRoleLoader, action as editRoleAction } from './
 import { action as deleteRoleAction } from './components/RoleDetails';
 import Contact from './views/Contact';
 import LocationsView from './views/LocationsView';
-
+import SignUpForm from './components/SignUpForm';
 // src/router.tsx
 
 
@@ -46,7 +46,11 @@ export const router = createBrowserRouter([
             {
                 path: 'locations',  // Nueva ruta para la página de contacto
                 element: <LocationsView />,  // Renderiza el componente ContactView
-            }
+            },
+            {
+                path: 'signup', // Nueva ruta para el formulario de inscripción
+                element: <SignUpForm />,
+            },
         ],
     }
 ]);
