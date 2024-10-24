@@ -1,0 +1,66 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  text-align: center; /* Centrar el título */
+  margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.form-container {
+  background-color: white; /* Fondo blanco para el formulario */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 500px; /* Ancho máximo */
+  margin: 20px auto; /* Centrado horizontal */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Espaciado entre campos */
+}
+
+label {
+  display: block; /* Para que el label ocupe el ancho completo */
+  margin-bottom: 8px; /* Espacio entre el label y el input */
+  font-weight: bold; /* Texto en negrita */
+  color: #555; /* Color más suave */
+}
+
+input, select {
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Mayor espacio interno */
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+input:focus, select:focus {
+  border-color: #4CAF50; /* Color del borde al enfocar */
+  outline: none; /* Quitar el contorno por defecto */
+}
+
+button {
+  background-color: #2196F3; /* Color del botón */
+  color: white;
+  border: none;
+  padding: 12px 15px; /* Mayor espacio en el botón */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+  font-size: 16px; /* Tamaño de fuente */
+  width: 100%; /* Botón ocupa todo el ancho */
+}
+
+button:hover {
+  background-color: #1976D2; /* Color al pasar el mouse */
+  transform: scale(1.05); /* Efecto de aumento */
+}
+
+button:active {
+  transform: scale(0.95); /* Efecto de presión */
+}
