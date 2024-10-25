@@ -25,6 +25,7 @@ import UsuariosList from './usuarios/UsuariosList.jsx';
 
 import AsignacionesList from './Asignaciones/AsignacionesList.jsx';
 import CrearAsignacion from './Asignaciones/CrearAsignacion.jsx';
+import TarjetasList from './Tarjetas/TarjetasList.jsx';
 
 
 export const router = createBrowserRouter([
@@ -128,6 +129,11 @@ export const router = createBrowserRouter([
                 path: 'asignaciones/new',
                 element: <CrearAsignacion />, // Formulario para crear una nueva membresía
             },
+            {
+                path: 'tarjetas',
+                element: <TarjetasList />, // Lista de membresías
+            },
+            
             
         ],
     },

@@ -31,6 +31,13 @@ const Administracion = () => {
                     >
                         Entrenadores
                     </button>
+
+                    <button
+                        onClick={() => navigate('/tarjetas')}
+                        className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+                    >
+                        Tarjetas
+                    </button>
                     <button
                         onClick={() => navigate('/usuarios')}
                         className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
