@@ -22,6 +22,7 @@ const Header = () => {
         <Link to="/contact" className="text-yellow-500 hover:text-white">Contactanos</Link>
         <Link to="/HomeStore" className="text-yellow-500 hover:text-white">Tienda</Link>
         <Link to="/servicios" className="text-yellow-500 hover:text-white">Servicios</Link>
+        <Link to="/BebidaMenu" className="text-yellow-500 hover:text-white">Restaurante</Link>
       </div>
       <div className="flex items-center space-x-5">
       <Link to="/Login" className="text-yellow-500 hover:text-white">Tu Perfil</Link>

@@ -14,7 +14,7 @@ import PagoTarjeta from './components/Contactanos/PagoTarjeta';
 import LocationsView from './components/Sedes/LocationsView';
 import SignUpForm from './components/Sedes/SignUpForm';
 import AboutUs from './components/SobreNosotros/AboutUs';
-
+import BebidaMenu from './components/Restaurante/BebidaMenu';
 
 
 const Root = () => (
@@ -73,6 +73,10 @@ const router = createBrowserRouter([
       {
         path: 'pago-tarjeta',
         element: <PagoTarjeta />,
+      },
+      {
+        path: 'BebidaMenu',
+        element: <BebidaMenu />,
       },
     ],
   },
