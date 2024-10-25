@@ -38,6 +38,13 @@ const Administracion = () => {
                     >
                         Tarjetas
                     </button>
+
+                    <button
+                        onClick={() => navigate('/control')}
+                        className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+                    >
+                        Estadisticas
+                    </button>
                     <button
                         onClick={() => navigate('/usuarios')}
                         className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"

@@ -27,6 +27,12 @@ import AsignacionesList from './Asignaciones/AsignacionesList.jsx';
 import CrearAsignacion from './Asignaciones/CrearAsignacion.jsx';
 import TarjetasList from './Tarjetas/TarjetasList.jsx';
 
+import ControlList from './Control/ControlList.jsx';
+import CrearTarjeta from './Tarjetas/CrearTarjeta.jsx';
+import ActualizarControl from './Control/ActualizarControl.jsx';
+import CrearUsuario from './usuarios/CrearUsuario.jsx';
+
+
 
 export const router = createBrowserRouter([
     {
@@ -122,6 +128,11 @@ export const router = createBrowserRouter([
                 element: <UsuariosList />, // Lista de membresías
             },
             {
+                path: 'usuarios/new',
+                element: <CrearUsuario />, // Formulario para crear una nueva membresía
+            },
+            
+            {
                 path: 'asignaciones',
                 element: <AsignacionesList />, // Lista de membresías
             },
@@ -132,6 +143,18 @@ export const router = createBrowserRouter([
             {
                 path: 'tarjetas',
                 element: <TarjetasList />, // Lista de membresías
+            },
+            {
+                path: 'tarjetas/new',
+                element: <CrearTarjeta />, 
+            },
+            {
+                path: 'control',
+                element: <ControlList />, // Lista de membresías
+            },
+            {
+                path: 'control/:id/edit',
+                element: <ActualizarControl />, // Formulario para editar un cliente
             },
             
             

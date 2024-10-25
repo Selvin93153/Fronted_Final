@@ -49,32 +49,27 @@ const TarjetasList = () => {
       >
         Crear Nueva Tarjeta
       </button>
-      <table className="min-w-full bg-white border border-gray-200">
+      <table className="min-w-full bg-white border border-black-2000">
         <thead>
           <tr>
-            <th className="py-2 px-4 border-b">tarjeta_id</th>
+            
             <th className="py-2 px-4 border-b">nombre</th>
             <th className="py-2 px-4 border-b">Número de Tarjeta</th>
             <th className="py-2 px-4 border-b">Expiración</th>
             <th className="py-2 px-4 border-b">Nombre del Titular</th>
-            <th className="py-2 px-4 border-b">Acciones</th>
+            
           </tr>
         </thead>
         <tbody>
           {tarjetas.map(tarjeta => (
             <tr key={tarjeta.tarjeta_id}>
-              <td className="py-2 px-4 border-b">{tarjeta.tarjeta_id}</td>
+             
               <td className="py-2 px-4 border-b">{tarjeta.usuario ? tarjeta.usuario.nombre : 'Sin usuario'}</td> {/* Mostrar el nombre del usuario */}
               <td className="py-2 px-4 border-b">**** **** **** {tarjeta.numero_tarjeta.slice(-4)}</td> {/* Mostrar sólo los últimos 4 dígitos */}
               <td className="py-2 px-4 border-b">{tarjeta.expiracion}</td>
               <td className="py-2 px-4 border-b">{tarjeta.nombre_titular}</td>
               <td className="py-2 px-4 border-b">
-                <button 
-                  onClick={() => handleEdit(tarjeta.tarjeta_id)} 
-                  className="bg-yellow-500 text-white py-1 px-2 rounded hover:bg-yellow-700 transition duration-300"
-                >
-                  Editar
-                </button>
+              
               </td>
             </tr>
           ))}
